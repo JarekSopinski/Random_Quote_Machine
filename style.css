@@ -1,0 +1,21 @@
+#quoteContainer {
+    background-color: rgba(0,0,0,0.6);
+    padding: 50px;
+    position: relative;
+    top: 25vh;
+    margin: 0 50px;
+}
+
+#quoteBody, #quoteAuthor {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#newQuoteBtn {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    padding: 10px;
+}
+
