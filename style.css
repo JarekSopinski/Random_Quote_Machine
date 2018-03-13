@@ -48,12 +48,9 @@ body {
     text-decoration: none;
 }
 
-#twitterIcon {
-    cursor: pointer;
-}
-
 #twitterIcon img {
     height: 50px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {

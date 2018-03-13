@@ -5,7 +5,7 @@ const quoteBody = document.getElementById("quoteBody");
 const quoteAuthor = document.getElementById("quoteAuthor");
 const errorMsg = document.getElementById("errorMsg");
 const newQuoteBtn = document.getElementById("newQuoteBtn");
-const twitterBtn = document.getElementById("twitterIcon");
+const twitterBtn = document.getElementsByTagName("img")[0];
 
 const colors = [
     "#D3C4D1",
