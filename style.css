@@ -1,39 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 #quoteContainer {
-    background-color: rgba(0,0,0,0.4);
+    margin: 0 50px;
     padding: 50px;
     position: relative;
-    top: 25vh;
-    margin: 0 50px;
+    top: 20vh;
+    background-color: rgba(0,0,0,0.4);
     border: 5px solid white;
 }
 
 #quoteBody, #quoteAuthor {
     color: white;
-    font-size: 20px;
     text-align: center;
 }
 
 #quoteBody {
+    font-family: 'Rozha One', serif;
     font-style: italic;
+    font-size: 30px;
 }
 
-#buttonsContainer {
-    display: flex;
-    justify-content: center;
+#quoteAuthor {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 
 #newQuoteBtn {
+    margin: auto;
     padding: 10px;
     cursor: pointer;
     display: block;
-    margin: auto;
+    background-color: transparent;
+    border: 2px solid white;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
 }
 
 #twitterIcon {
     cursor: pointer;
 }
 
-img {
+#twitterIcon img {
     height: 50px;
 }
 
+@media screen and (max-width: 576px) {
+
+    #quoteContainer {
+        margin: 0 20px;
+        padding: 20px;
+        position: relative;
+        top: 5vh;
+    }
+
+    #quoteBody {
+        font-size: 20px;
+    }
+
+    #twitterIcon {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+}
