@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+body {
+    transition: background-color, 2s;
+}
+
 #quoteContainer {
     margin: 0 50px;
     padding: 50px;
