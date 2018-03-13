@@ -1,9 +1,10 @@
 #quoteContainer {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.4);
     padding: 50px;
     position: relative;
     top: 25vh;
     margin: 0 50px;
+    border: 5px solid white;
 }
 
 #quoteBody, #quoteAuthor {
@@ -12,10 +13,27 @@
     text-align: center;
 }
 
+#quoteBody {
+    font-style: italic;
+}
+
+#buttonsContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #newQuoteBtn {
+    padding: 10px;
+    cursor: pointer;
     display: block;
     margin: auto;
+}
+
+#twitterIcon {
     cursor: pointer;
-    padding: 10px;
+}
+
+img {
+    height: 50px;
 }
 

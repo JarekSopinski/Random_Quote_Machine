@@ -59,4 +59,21 @@ const setRandomBgColor = () => {
 window.addEventListener('load', setRandomBgColor);
 newQuoteBtn.addEventListener('click', setRandomBgColor);
 
+// Sharing quotes on Twitter:
+
+const twitterBtn = document.getElementById("twitterIcon");
+
+const handleTwitterBtn = () => {
+
+    const twitterUrl = "https://twitter.com/intent/tweet";
+    const tweet = `${quoteBody.innerText} - ${quoteAuthor.innerText}`;
+    const hashtags = "quote, inspirational";
+    const via = "RandomQuoteMachine";
+
+    window.open(`${twitterUrl}?text=${tweet};hashtags=${hashtags};via=${via}`,"","width=500,height=500")
+
+};
+
+twitterBtn.addEventListener("click", handleTwitterBtn);
+
 
