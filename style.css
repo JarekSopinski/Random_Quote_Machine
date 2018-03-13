@@ -30,6 +30,12 @@ body {
     font-size: 20px;
 }
 
+#errorMsg {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
 #newQuoteBtn {
     margin: auto;
     padding: 10px;

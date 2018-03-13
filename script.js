@@ -1,8 +1,9 @@
 const API_URL = 'https://talaikis.com/api/quotes/random/';
-const ERROR_MSG = 'AN ERROR OCCURRED. TRY AGAIN.';
+const ERROR_MSG = 'AN ERROR OCCURRED. CHECK YOUR INTERNET CONNECTION AND TRY AGAIN.';
 
 const quoteBody = document.getElementById("quoteBody");
 const quoteAuthor = document.getElementById("quoteAuthor");
+const errorMsg = document.getElementById("errorMsg");
 const newQuoteBtn = document.getElementById("newQuoteBtn");
 const twitterBtn = document.getElementById("twitterIcon");
 
@@ -36,13 +37,15 @@ const renderNewQuote = (data) => {
     const newQuoteAuthor = data.author;
 
     quoteBody.innerText = newQuoteBody;
-    quoteAuthor.innerText = newQuoteAuthor
+    quoteAuthor.innerText = newQuoteAuthor;
+    errorMsg.innerText = ''
 
 };
 
 const renderError = () => {
-    quoteBody.innerText = ERROR_MSG;
-    quoteAuthor.innerText = ' '
+    errorMsg.innerText = ERROR_MSG;
+    quoteBody.innerText = '';
+    quoteAuthor.innerText = ''
 };
 
 const setRandomBgColor = () => {
