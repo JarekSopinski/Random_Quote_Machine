@@ -1,11 +1,25 @@
 const API_URL = 'https://talaikis.com/api/quotes/random/';
-const ERROR_MSG = 'Something went wrong. Try again.';
+const ERROR_MSG = 'AN ERROR OCCURRED. TRY AGAIN.';
 
 const quoteBody = document.getElementById("quoteBody");
 const quoteAuthor = document.getElementById("quoteAuthor");
 const newQuoteBtn = document.getElementById("newQuoteBtn");
+const twitterBtn = document.getElementById("twitterIcon");
 
-// Fetching and rendering data
+const colors = [
+    "#D3C4D1",
+    '#FF729F',
+    '#56CBF9',
+    '#81F4E1',
+    '#FA8334',
+    '#EBC2AB',
+    '#FF928B',
+    '#FFF05A',
+    '#9BC53D',
+    '#E55934',
+    '#FDE74C',
+    '#5BC0EB'
+];
 
 const fetchData = () => {
 
@@ -31,37 +45,9 @@ const renderError = () => {
     quoteAuthor.innerText = ' '
 };
 
-window.addEventListener('load', fetchData);
-newQuoteBtn.addEventListener('click', fetchData);
-
-
-// Setting random background color:
-
-const colors = [
-    "#D3C4D1",
-    '#FF729F',
-    '#56CBF9',
-    '#81F4E1',
-    '#FA8334',
-    '#EBC2AB',
-    '#FF928B',
-    '#FFF05A',
-    '#9BC53D',
-    '#E55934',
-    '#FDE74C',
-    '#5BC0EB'
-];
-
 const setRandomBgColor = () => {
     document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 };
-
-window.addEventListener('load', setRandomBgColor);
-newQuoteBtn.addEventListener('click', setRandomBgColor);
-
-// Sharing quotes on Twitter:
-
-const twitterBtn = document.getElementById("twitterIcon");
 
 const handleTwitterBtn = () => {
 
@@ -74,6 +60,8 @@ const handleTwitterBtn = () => {
 
 };
 
+window.addEventListener('load', setRandomBgColor);
+window.addEventListener('load', fetchData);
+newQuoteBtn.addEventListener('click', setRandomBgColor);
+newQuoteBtn.addEventListener('click', fetchData);
 twitterBtn.addEventListener("click", handleTwitterBtn);
-
-
