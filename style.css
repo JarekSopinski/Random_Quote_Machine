@@ -6,10 +6,8 @@ body {
 }
 
 #quoteContainer {
-    margin: 0 50px;
+    margin: 100px 50px;
     padding: 50px;
-    position: relative;
-    top: 20vh;
     background-color: rgba(0,0,0,0.4);
     border: 5px solid white;
 }
@@ -56,10 +54,8 @@ body {
 @media screen and (max-width: 576px) {
 
     #quoteContainer {
-        margin: 0 20px;
+        margin: 50px 20px;
         padding: 20px;
-        position: relative;
-        top: 5vh;
     }
 
     #quoteBody {
