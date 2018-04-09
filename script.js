@@ -8,18 +8,18 @@ const newQuoteBtn = document.getElementById("newQuoteBtn");
 const twitterBtn = document.getElementsByTagName("img")[0];
 
 const colors = [
-    "#D3C4D1",
-    '#FF729F',
-    '#56CBF9',
-    '#81F4E1',
-    '#FA8334',
-    '#EBC2AB',
-    '#FF928B',
-    '#FFF05A',
-    '#9BC53D',
-    '#E55934',
-    '#FDE74C',
-    '#5BC0EB'
+    "rgb(211, 196, 209)",
+    'rgb(255, 114, 159)',
+    'rgb(86, 203, 249)',
+    'rgb(129, 244, 225)',
+    'rgb(250, 131, 52)',
+    'rgb(235, 194, 171)',
+    'rgb(255, 146, 139)',
+    'rgb(255, 240, 90)',
+    'rgb(155, 197, 61)',
+    'rgb(229, 89, 52)',
+    'rgb(253, 231, 76)',
+    'rgb(91, 192, 235)'
 ];
 
 const fetchData = () => {
@@ -48,8 +48,19 @@ const renderError = () => {
     quoteAuthor.innerText = ''
 };
 
-const setRandomBgColor = () => {
+const setInitialRandomBgColor = () => {
     document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+};
+
+const setNewRandomBgColor = () => {
+
+    const currentBGColorRGB = document.body.style.backgroundColor;
+    const newBGColor = colors[Math.floor(Math.random() * colors.length)];
+
+    newBGColor === currentBGColorRGB ?
+        setNewRandomBgColor()
+        :
+        document.body.style.backgroundColor = newBGColor
 };
 
 const handleTwitterBtn = () => {
@@ -63,8 +74,8 @@ const handleTwitterBtn = () => {
 
 };
 
-window.addEventListener('load', setRandomBgColor);
+window.addEventListener('load', setInitialRandomBgColor);
 window.addEventListener('load', fetchData);
-newQuoteBtn.addEventListener('click', setRandomBgColor);
+newQuoteBtn.addEventListener('click', setNewRandomBgColor);
 newQuoteBtn.addEventListener('click', fetchData);
 twitterBtn.addEventListener("click", handleTwitterBtn);
