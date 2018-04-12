@@ -7,7 +7,7 @@ A random quote generator, fetching data from an open API. User can get a new ran
 #### How it works
 
 1. A random quote is fetched from an [open API](https://talaikis.com/random_quotes_api) created by Tadas Talaiks (72 000 quotes).
-2. Every page reload sets a new random background color. I used recursion to prevent getting the same color two times in a row.
+2. Fetching a new quote sets a new random background color. I used recursion to prevent getting the same color two times in a row.
 3. Upon clicking Twitter button user can share quote's body (not url!) with author and hashtags already included. 
 
 ---
